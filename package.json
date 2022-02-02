@@ -1,0 +1,71 @@
+{
+  "name": "cs308",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.11.3",
+    "@material-ui/lab": "^4.0.0-alpha.58",
+    "@react-pdf/renderer": "^2.0.12",
+    "@testing-library/jest-dom": "^5.11.10",
+    "@testing-library/react": "^11.2.6",
+    "@testing-library/user-event": "^12.8.3",
+    "antd": "^4.15.2",
+    "apexcharts": "^3.26.2",
+    "axios": "^0.21.1",
+    "bootstrap": "^4.6.0",
+    "chart.js": "^3.2.1",
+    "mobx-react": "^7.1.0",
+    "nice-invoice": "^1.0.6",
+    "pdfkit": "^0.12.1",
+    "react": "^17.0.2",
+    "react-chartjs": "^1.2.0",
+    "react-chartjs-2": "^3.0.3",
+    "react-currency-format": "^1.0.0",
+    "react-dom": "^17.0.2",
+    "react-pdf": "^5.3.0",
+    "react-responsive-carousel": "^3.2.18",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "react-vis": "^1.11.7",
+    "reactstrap": "^8.9.0",
+    "styled-components": "^5.2.3",
+    "validator": "^13.6.0",
+    "web-vitals": "^1.1.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@material-ui/icons": "^4.11.2",
+    "jspdf": "^2.3.1",
+    "jspdf-invoice-template": "^1.2.0",
+    "mobx": "^6.2.0",
+    "prop-types": "^15.7.2",
+    "react-datepicker": "^3.8.0",
+    "react-rating-stars-component": "^2.2.0",
+    "react-redux": "^7.2.4",
+    "react-router-hash-link": "^2.4.3",
+    "reactjs-popup": "^2.0.4"
+  }
+}

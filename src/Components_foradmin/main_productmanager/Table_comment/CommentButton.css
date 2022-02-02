@@ -1,0 +1,29 @@
+.buttons{
+    width: 70%;
+    margin: 3rem auto;
+    text-align: center;
+}
+
+.btn_filter{
+    padding: .5rem 2rem;
+    background-color: #0C3564;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: white;
+    transition: all 0.4s cubic-bezier(1,-0.16,.6,1.35);
+}
+
+.btn_filter:not(:last-child){
+    margin-right: 1rem;
+}
+
+.btn_filter:hover{
+    background-color: #037FFf;
+    cursor: pointer;
+}
+
+.btn_filter:active, .btn_filter:focus{
+    outline: none;
+    border: none;
+}
