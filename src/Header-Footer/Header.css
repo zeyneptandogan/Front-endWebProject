@@ -1,0 +1,146 @@
+header .header-1, header .header-2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:1.5rem;
+    z-index: 1000;
+}
+header .header-1{
+    background:wheat;
+    height:90px;
+}
+header .header-2{
+
+    background:#FF9933;
+    height:20px;
+}
+header .header-2 .navbar{
+    text-decoration:none ;
+}
+header .header-2 .navbar ul{
+
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 2rem;
+}
+
+header .header-2 .navbar ul li{
+    margin:0 2rem;
+
+}
+
+header .header-2 .navbar ul li a{
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    color:#fff;
+}
+
+header .header-2 .navbar ul li a:hover{
+    color:black;
+}
+header  .svg__icon {
+    color: black;
+    font-size: 2rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+header .svg__icon :hover{
+    color: orange;
+}
+
+
+/*input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}*/
+
+
+.header__logo {
+    padding-left: 100px;
+    width: 200px;
+    object-fit: contain;
+    margin-left: 200px;
+    margin: 0 8px;
+    margin-top: 5px;
+}
+
+.header__search {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    border-radius: 24px;
+}
+
+.header__searchInput {
+    height: 12px;
+    padding: 10px;
+    border: none;
+    width: 100%;
+}
+
+.header__searchIcon {
+    padding: 5px;
+    height: 22px !important;
+    background-color: #FF9933;
+}
+.header__link{
+    display: flex;
+    align-items: center;
+    color:black;
+    text-decoration:none ;
+}
+
+.header__link :hover{
+    color: orange;
+}
+
+.header__optionLineOne {
+    font-size: 10px;
+}
+
+.header__optionLineTwo {
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.header__optionBasket {
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    color: black;
+    padding-right: 100px;
+}
+
+.header__optionBasket :hover{
+    color: orange;
+}
+
+.header__basketCount {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.header__option {
+
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: black;
+}

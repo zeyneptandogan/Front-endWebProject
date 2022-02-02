@@ -1,0 +1,177 @@
+import React, {  useEffect } from 'react'
+import { Grid, } from '@material-ui/core';
+import Controls from "../../../controls/Controls";
+import { useForm, Form } from '../../../Components_foradmin/useForm';
+import Axios from "axios";
+import UserStore from "../../../Login-SignUp/UserStore";
+
+const initialFValues = {
+    full_name: '',
+    end_date: '',
+    creditcard_number: '',
+    cvv: '',
+    type: '',
+}
+
+export default function EditProduct(props) {
+
+
+    const {openPopup, setOpenPopup,records,setRecords,notify,setNotify,recordForEdit,setRecordForEdit,isEdit,setisEdit} = props;
+
+    const validate = (fieldValues = values) => {
+        let temp = { ...errors }
+        if ('full_name' in fieldValues)
+            temp.full_name = fieldValues.full_name ? "" : "This field is required."
+        if ('end_date' in fieldValues)
+            temp.end_date = fieldValues.end_date ? "" : "This field is required."
+        if ('creditcard_number' in fieldValues)
+            temp.creditcard_number = fieldValues.creditcard_number ? "" : "This field is required."
+        if ('cvv' in fieldValues)
+            temp.cvv = fieldValues.cvv ? "" : "This field is required."
+        if ('type' in fieldValues)
+            temp.type = fieldValues.type ? "" : "This field is required."
+
+        setErrors({
+            ...temp
+        })
+
+        if (fieldValues === values)
+            return Object.values(temp).every(x => x === "")
+    }
+
+    useEffect(() => {
+        if (recordForEdit != null)
+            setValues({
+                ...recordForEdit
+            })
+    }, [recordForEdit])
+
+    const {
+        values,
+        setValues,
+        errors,
+        setErrors,
+        handleInputChange,
+        resetForm
+    } = useForm(initialFValues, true, validate);
+
+
+    const handleClose = () => {
+        setRecordForEdit(null);
+        resetForm();
+        setOpenPopup(false);
+    }
+
+
+
+    console.log(recordForEdit);
+    console.log(values);
+
+    const handleSubmit = e => {
+        e.preventDefault();
+        console.log("Helooo")
+        if (validate()){
+
+            console.log("helo2")
+            Axios.post(
+            "http://localhost:8080/creditCard/update" ,{
+                id: parseInt(recordForEdit.id),
+                email: recordForEdit.email ,
+                creditcard_number: values.creditcard_number ,
+                cvv: values.cvv ,
+                full_name: values.full_name ,
+                end_date: values.end_date ,
+                type:  values.type}
+            )
+                .then(res=>{
+                    console.log(res.data);
+                    setRecordForEdit(null);
+                    Axios.post("http://localhost:8080/creditCard/getByEmail",{
+                        email: UserStore.email,
+                    })
+                        .then(res=>{
+                            console.log(res)
+                            if (res.status===200) {
+                                setRecords(res.data);
+                            }
+                            else {
+                                if (res.status === 400) {
+                                    alert("Wrong email!");
+                                }
+                                else {
+                                    alert("Something went wrong!");
+                                }
+                            }
+
+                        })
+                })
+                .catch((error) => {
+                    console.log(error);
+                })
+
+            resetForm();
+            setOpenPopup(false);
+        }
+    }
+
+    return (
+        <Form onSubmit={handleSubmit}>
+            <Grid container>
+                <Grid item xs={6}>
+                    <Controls.Input
+                        label="Card Holder Name"
+                        name="full_name"
+                        value={values.full_name}
+                        onChange={handleInputChange}
+                        error={errors.full_name}
+                    />
+                    <Controls.Input
+                        label="Credit Card Number"
+                        name="creditcard_number"
+                        value={values.creditcard_number}
+                        onChange={handleInputChange}
+                        error={errors.creditcard_number}
+                    />
+                    <Controls.Input
+                        label="CVV"
+                        name="cvv"
+                        value={values.cvv}
+                        onChange={handleInputChange}
+                        error={errors.cvv}
+                    />
+
+
+
+                </Grid>
+                <Grid item xs={6}>
+                    <Controls.Input
+                        name="end_date"
+                        label="End Date"
+                        value={values.end_date}
+                        onChange={handleInputChange}
+                        error={errors.end_date}
+                    />
+
+                    <Controls.Input
+                        label="Type"
+                        name="type"
+                        value={values.type}
+                        onChange={handleInputChange}
+                        error={errors.type}
+                    />
+
+
+                    <div>
+                        <Controls.Button
+                            type="submit"
+                            text="Submit" />
+                        <Controls.Button
+                            text="Close"
+                            color="default"
+                            onClick={handleClose} />
+                    </div>
+                </Grid>
+            </Grid>
+        </Form>
+    )
+}

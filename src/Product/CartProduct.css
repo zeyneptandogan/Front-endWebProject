@@ -1,0 +1,112 @@
+.card_big{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    position:relative;
+    width:300px;
+    height: 456px;
+    background: wheat;
+    border-radius: 20px;
+    overflow: hidden;
+    z-index: 1;
+}
+.card_big::before{
+    content:'';
+    position:absolute;
+    top:-50%;
+    width:100%;
+    height: 100%;
+    background: whitesmoke;
+    transform: skewY(345deg);
+    transition:0.5s;
+}
+.card_big:hover::before{
+    position: absolute;
+    top:-70%;
+    transform: skewY(390deg);
+}
+.product__rating{
+    display: flex;
+}
+.imgBx_big{
+    position: relative;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+    z-index:1;
+}
+.imgBx_big img.image_Card{
+    max-width: 100%;
+    transition:0.5s;
+    justify-content: center;
+    align-items: center;
+}
+.card_big:hover.imgBx_big img.image_Card{
+    max-width: 50%;
+
+}
+.contentBx_big{
+    position: relative;
+    padding: 12px;
+    display:flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.contentBx2_big{
+
+    position: relative;
+    padding: 12px;
+    display:flex;
+    flex-direction: column;
+    z-index: 1;
+    color: orangered;
+    font-weight: 700;
+}
+.contentBx_big h3{
+    text-decoration: none;
+    font-size: 15px;
+    color:black;
+    font-weight:500;
+    letter-spacing: 1px;
+}
+.contentBx_big h2{
+    font-size: 13px;
+    text-align: left;
+    color:black;
+    font-weight:500;
+    letter-spacing: 1px;
+}
+
+.btn3{
+    padding: 5px;
+    background: transparent;
+    border-radius: 20px;
+    width:80%;
+    margin:0;
+    cursor: pointer;
+    font-size: 12px;
+}
+.primary{
+    color: white;
+    background: linear-gradient(45deg, rgba(222,197,5,1) 24%, rgba(255,107,0,1) 100%);
+}
+.contentBx_big .price_big{
+    color:#ff3300;
+    font-size: 1.2rem;
+    display: flex;
+}
+.contentBx_big .price_notdiscount_big{
+    color:dimgrey;
+    font-size: 1rem;
+    display: flex;
+}
+.contentBx_big .price_big span{
+    color:#666;
+    font-size: 1rem;
+    text-decoration: line-through;
+    display: flex;
+}

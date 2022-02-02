@@ -1,0 +1,125 @@
+.deal{
+    min-height: 50vh;
+    display: flex;
+    z-index:1000;
+}
+.deal .icons-container{
+    min-width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    flex-wrap: wrap;
+}
+
+.deal .icons-container .icons{
+    flex:0 0 15rem;
+    padding:1rem;
+    margin:1rem;
+    text-align: center;
+    border-right:.2rem solid orange;
+}
+
+.deal .icons-container .icons .svg__icons{
+    color:wheat;
+    transform: scale(5);
+    padding:2.5rem 0;
+}
+
+.deal .icons-container .icons__last{
+    flex:0 0 15rem;
+    padding:1rem;
+    margin:1rem;
+    text-align: center;
+}
+
+.deal .icons-container .icons__last .svg__icons{
+    color:wheat;
+    transform: scale(5);
+    padding:2.5rem 0;
+}
+.deal .icons-container .icons__last h3{
+    color:#333;
+    font-size: 1.3rem;
+}
+
+.deal .icons-container .icons__last p{
+    color:#666;
+    font-size: 1rem;
+    padding:1rem 0;
+}
+.deal .icons-container .icons h3{
+    color:#333;
+    font-size: 1.3rem;
+}
+
+.deal .icons-container .icons p{
+    color:#666;
+    font-size: 1rem;
+    padding:1rem 0;
+}
+
+
+
+.footer .box-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer .box-container .box{
+    flex:1 1 25rem;
+    margin:2rem;
+}
+
+
+.footer .box-container .box .svg__icons__footer{
+    color:orange;
+    transform: scale(1);
+
+}
+
+.footer .box-container .box p{
+    font-size: 1.3rem;
+    padding:1rem 0;
+    color:#666;
+}
+
+.footer .box-container .box h3{
+    font-size: 1.5rem;
+    color:black;
+}
+.footer .box-container .box h2{
+    font-size: 1.5rem;
+    color:black;
+    padding-left: 15rem;
+}
+
+.footer .box-container .box:nth-child(2){
+    text-align: center;
+}
+
+.footer .box-container .box a{
+    display: block;
+    font-size: 1.3rem;
+    padding:.6rem 0;
+    padding-left: 14rem;
+    color:#666;
+    text-decoration: none;
+}
+
+.footer .box-container .box a:hover{
+    text-decoration: underline;
+}
+
+.footer .credit{
+    text-align: center;
+    width: 85%;
+    margin:0 auto;
+    padding:1.4rem 0;
+    border-top: .1rem solid rgba(0,0,0,.3);
+    color:#666;
+    font-size: 1.5rem;
+    padding-bottom: 2rem;
+}
+
