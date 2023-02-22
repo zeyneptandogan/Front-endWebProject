@@ -4,4 +4,4 @@
   
   There are also two other roles in the project; these are product manager and sales manager. Admin dashboards are created for each with different specifications and attributes. While product manager can see the bills for the users and follow some charts related to products such as stock situation for each type of books, sales manager can follow the sales by choosing date intervals and change the number of available books in the system. The comments that the users wrote requires the permission of the product manager in order the comment to be visible on the website.
   
-  The front-end of the project was carried out by two group members, including myself.
+  **The front-end of the project was carried out by two group members, including myself.**
